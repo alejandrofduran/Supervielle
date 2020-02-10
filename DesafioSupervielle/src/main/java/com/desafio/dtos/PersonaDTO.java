@@ -17,7 +17,7 @@ public class PersonaDTO {
 	private Integer  id;
 	
 	@ApiModelProperty(value = "Indica el tipo de documento de la persona.", required = true, example = "DNI")
-	@JsonProperty(value = "tipo_docuemnto")
+	@JsonProperty(value = "document_numero")
 	@NotEmpty
 	private String tipoDocumento;
 	
