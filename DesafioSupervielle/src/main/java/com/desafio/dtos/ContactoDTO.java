@@ -1,5 +1,7 @@
 package com.desafio.dtos;
 
+import javax.validation.constraints.Pattern;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +14,7 @@ public class ContactoDTO {
 	
 	@ApiModelProperty(value = "Indica el número de teléfono de la persona.", example = "+541112341234")
 	@JsonProperty(value = "telefono")
-	//@Pattern(regexp = "^\\+(?:[0-9] ?){6,14}[0-9]$", message = "Numero de teléfono no valido.")
+	@Pattern(regexp = "^\\+(?:[0-9] ?){6,14}[0-9]$", message = "Numero de teléfono no valido.")
     private String telefono;
 
 	public String getMail() {
